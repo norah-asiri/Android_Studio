@@ -30,7 +30,7 @@
             android:ems="10"
             android:textAlignment="center"
             android:hint="Enter valid zip code"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:minHeight="48dp"
             android:textColor="@color/white" />
 
