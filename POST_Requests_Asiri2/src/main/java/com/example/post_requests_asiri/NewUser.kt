@@ -22,7 +22,7 @@ class NewUser : AppCompatActivity() {
         val savebtn = findViewById<View>(R.id.button) as Button
 
         savebtn.setOnClickListener {
-            var f = Users.UserDetails(name.text.toString(), location.text.toString())
+            var f = Users.UserDetails(name.text.toString(), location.text.toString(),1)
             addSingleuser(f, onResult = {
                 name.setText("")
                 location.setText("")

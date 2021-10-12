@@ -23,9 +23,15 @@ class MainActivity : AppCompatActivity() {
 
         val responseText = findViewById<View>(R.id.textView) as TextView
         val button = findViewById<View>(R.id.button3) as Button
+        val button2 = findViewById<View>(R.id.UPDATE_DELETE_USER) as Button
 
         button.setOnClickListener {
             intent = Intent(applicationContext, NewUser::class.java)
+            startActivity(intent)
+        }
+
+        button2.setOnClickListener {
+            intent = Intent(applicationContext, Update_Delete::class.java)
             startActivity(intent)
         }
             val apiInterface = APIClient().getClient()?.create(APIInterface::class.java)
@@ -40,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                         response: Response<List<Users.UserDetails>>
                     ) {
                         progressDialog.dismiss()
-                        var NewPost: String? = "";
+                        var NewPost: String? = ""
                         for (User in response.body()!!) {
                             NewPost =
                                 NewPost + User.name + "\n" + User.location + "\n" + "\n"

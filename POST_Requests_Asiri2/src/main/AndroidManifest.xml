@@ -13,9 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.POST_Requests_Asiri">
         <activity
-            android:name=".NewUser"
+            android:screenOrientation="fullUser"
+            android:name=".Update_Delete"
             android:exported="true" />
         <activity
+            android:name=".NewUser"
+            android:screenOrientation="fullUser"
+            android:exported="true" />
+        <activity
+            android:screenOrientation="fullUser"
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
