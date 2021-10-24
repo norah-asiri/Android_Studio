@@ -7,7 +7,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.w3d4"
+        applicationId "com.example.xmlparsingrssfeedhttpurlconnectionsasiri"
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -40,4 +40,11 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation ('com.squareup.retrofit2:converter-simplexml:2.2.0')
+            {
+                exclude group: 'xpp3', module: 'xpp3'
+                exclude group: 'stax', module: 'stax-api'
+                exclude group: 'stax', module: 'stax'
+            }
+
 }
